@@ -153,6 +153,7 @@ $(bbl): $(pk_srcdir) $(vmlinux_stripped)
 	rm -rf $(pk_wrkdir)
 	mkdir -p $(pk_wrkdir)
 	cd $(pk_wrkdir) && $</configure \
+		--enable-sm \
 		--host=$(target) \
 		--with-payload=$(vmlinux_stripped) \
 		--enable-logo \
