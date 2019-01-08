@@ -216,7 +216,8 @@ sim: $(spike) $(bbl)
 
 .PHONY: qemu
 qemu: $(qemu) $(bbl) $(rootfs)
-	$(qemu) -nographic -machine virt -kernel $(bbl) \
+	$(qemu) -bios bootrom/bootrom.elf \
+		-nographic -machine virt -kernel $(bbl) \
 		-drive file=$(rootfs),format=raw,id=hd0 -device virtio-blk-device,drive=hd0 \
 		-netdev user,id=net0 -device virtio-net-device,netdev=net0
 

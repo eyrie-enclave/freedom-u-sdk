@@ -22,3 +22,6 @@
 [submodule "sdk"]
 	path = sdk
 	url = git@github.com:keystone-enclave/keystone-sdk
+[submodule "freedom-u540-c000-bootloader"]
+	path = freedom-u540-c000-bootloader
+	url = https://github.com/keystone-enclave/freedom-u540-c000-bootloader.git
